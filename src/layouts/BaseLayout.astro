@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Maditron — Software Engineering, Agentic Systems & Mathematics",
+  description = "The personal digital headquarters of Mahdi Namehavar. Software engineering, agentic AI systems, mathematics, and experiments."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <meta name="theme-color" content="#090b12" />
+  <meta name="author" content="Mahdi Namehavar" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Maditron" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+
+  <body>
+    <div id="app">
+      <div class="topline"></div>
+      <div class="decor orbit"></div>
+      <slot />
+    </div>
+    <script>
+  import "../scripts/reveal";
+</script>
+  </body>
+</html>

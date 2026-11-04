@@ -1,0 +1,17 @@
+:root {
+  --site-primary: #7757e8;
+  --site-secondary: #12b8c8;
+  --site-background: #090b12;
+  --site-on-primary: #ffffff;
+  --site-on-secondary: #041316;
+  --site-on-background: #f1f3fb;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light dark;
+}
+
+:root { --surface: light-dark(#ffffff, #10131d); --surface-2: light-dark(#f7f8fc, #151a27); --line: light-dark(#e0e4ef, #242a3a); --muted: light-dark(#687087, #929bb2); --text: light-dark(#171b2b, #f1f3fb); --soft: light-dark(#eef0f8, #1b2030); --glow-a: #8b5cf6; --glow-b: #22d3ee; --glow-c: #fb923c; }

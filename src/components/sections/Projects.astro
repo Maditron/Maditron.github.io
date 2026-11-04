@@ -1,0 +1,101 @@
+<section class="section alt" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="kicker">03 / Selected work</div>
+        <h2>Projects & experiments.</h2>
+      </div>
+      <p class="section-desc">
+        A living portfolio. Projects will grow from focused practical tools
+        into increasingly capable intelligent systems.
+      </p>
+    </div>
+
+    <div class="project-toolbar reveal" role="group" aria-label="Filter projects">
+      <button class="filter active" data-filter="all">All work</button>
+      <button class="filter" data-filter="ai">AI & Agents</button>
+      <button class="filter" data-filter="software">Software</button>
+      <button class="filter" data-filter="research">Research & Labs</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+      <article class="card project-card reveal" data-category="ai">
+        <div class="project-top">
+          <span class="project-type">AI · Workflow automation</span>
+          <span class="status">In progress</span>
+        </div>
+        <h3>Customer Support Operations Automation</h3>
+        <p>An automation system for classifying incoming support requests, preparing responses, routing cases, and keeping humans in control of critical decisions.</p>
+        <div class="tags">
+          <span class="tag">Agentic workflows</span>
+          <span class="tag">APIs</span>
+          <span class="tag">Human-in-the-loop</span>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" data-category="ai">
+        <div class="project-top">
+          <span class="project-type">AI · Systems</span>
+          <span class="status">Planned</span>
+        </div>
+        <h3>Local Agent Workspace</h3>
+        <p>A local-first environment for tool-using agents, controlled execution, personal workflows, and privacy-conscious automation.</p>
+        <div class="tags">
+          <span class="tag">Local AI</span>
+          <span class="tag">Orchestration</span>
+          <span class="tag">Tools & permissions</span>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" data-category="software">
+        <div class="project-top">
+          <span class="project-type">Software · Engineering</span>
+          <span class="status">Archive in progress</span>
+        </div>
+        <h3>Backend Engineering</h3>
+        <p>A curated collection of engineering work, architecture decisions, implementation notes, and lessons from production software development.</p>
+        <div class="tags">
+          <span class="tag">Backend</span>
+          <span class="tag">Scalability</span>
+          <span class="tag">Clean code</span>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" data-category="research">
+        <div class="project-top">
+          <span class="project-type">Labs · Edge AIoT</span>
+          <span class="status">Exploring</span>
+        </div>
+        <h3>Edge Intelligence Lab</h3>
+        <p>Experiments toward efficient, autonomous AI systems operating closer to devices, data, and the physical world.</p>
+        <div class="tags">
+          <span class="tag">Edge AI</span>
+          <span class="tag">IoT</span>
+          <span class="tag">Systems research</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+  const filters = document.querySelectorAll<HTMLButtonElement>(
+    ".project-toolbar .filter"
+  );
+
+  const cards = document.querySelectorAll<HTMLElement>(".project-card");
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      filters.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.dataset.filter ?? "all";
+
+      cards.forEach((card) => {
+        card.hidden =
+          filter !== "all" && card.dataset.category !== filter;
+      });
+    });
+  });
+</script>

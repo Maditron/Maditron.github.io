@@ -1,0 +1,58 @@
+
+<header class="nav-wrap">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Maditron home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>MADITRON<span>.</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#writing">Writing</a>
+    </nav>
+
+    <a class="nav-cta" href="#contact">Let's connect ↗</a>
+
+    <button
+      type="button"
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+      <span aria-hidden="true">☰</span>
+    </button>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+
+  if (menuBtn instanceof HTMLButtonElement && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    };
+
+    menuBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navLinks.classList.contains("open")) {
+        closeMenu();
+        menuBtn.focus();
+      }
+    });
+  }
+</script>

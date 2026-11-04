@@ -1,0 +1,34 @@
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact reveal">
+      <div>
+        <div class="kicker">06 / Get in touch</div>
+        <h2>Good ideas travel further together.</h2>
+        <p>
+          For engineering opportunities, collaborations, thoughtful conversations,
+          or interesting problems.
+        </p>
+      </div>
+
+      <button class="button primary" id="emailBtn">
+        Copy email address ↗
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const email = "mahdi.namehavar@gmail.com";
+  const button = document.getElementById("emailBtn");
+
+  button?.addEventListener("click", async () => {
+    if (!(button instanceof HTMLButtonElement)) return;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      button.textContent = "Email copied ✓";
+    } catch {
+      button.textContent = email;
+    }
+  });
+</script>
