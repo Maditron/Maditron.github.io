@@ -74,13 +74,21 @@ h2 { font-size:clamp(29px,4vw,42px); letter-spacing:-.055em; margin:10px 0 0; li
 .timeline { border-left:1px solid var(--line); margin:10px 0 0 7px; padding-left:25px; display:grid; gap:24px; }.event { position:relative; }.event:before { content:""; position:absolute; left:-30px; top:4px; width:9px;height:9px;border-radius:50%;background:var(--glow-a);box-shadow:0 0 13px #8b5cf6; }.event small { color:var(--muted); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }.event h3 { font-size:14px; margin:7px 0 5px; }.event p { color:var(--muted); font-size:12px; line-height:1.6; margin:0; }
 .writing-card { min-height:170px; }.writing-card .date { color:var(--muted); font-size:10px; letter-spacing:.12em; }.writing-card h3 { font-size:17px; line-height:1.35; margin:14px 0 8px; }.writing-card p { margin-bottom:18px; }
 .contact { border:1px solid var(--line); border-radius:22px; padding:36px; background:linear-gradient(115deg,#7757e817,#12b8c80e 55%,#fb923c0b),var(--surface); display:flex; align-items:center; justify-content:space-between; gap:25px; position:relative; overflow:hidden; }.contact h2 { margin:0 0 10px; }.contact p { margin:0;color:var(--muted);font-size:13px;line-height:1.7; }
-footer { border-top:1px solid var(--line); padding:25px 0 35px; color:var(--muted); font-size:11px; }.footer-inner { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }.footer-links { display:flex; gap:18px; }
+footer { border-top:1px solid var(--line); padding:25px 0 35px; color:var(--muted); font-size:11px; }
+
+.footer-inner { display:flex; justify-content:center; gap:25px; flex-wrap:wrap; }
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
 .reveal { opacity:0; transform:translateY(16px); transition:opacity .65s ease,transform .65s ease; }.reveal.visible { opacity:1; transform:translateY(0); }
 
 /* Resume Hero */
 
 .resume-hero {
-  padding-top: 4rem;
+  padding-top: 6.5rem;
   padding-bottom: 3rem;
 }
 
