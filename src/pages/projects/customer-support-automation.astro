@@ -1,0 +1,227 @@
+
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/layout/Navbar.astro";
+import Footer from "../../components/layout/Footer.astro";
+---
+
+<BaseLayout
+  title="Customer Support Automation | Maditron"
+  description="An end-to-end customer support automation project combining AI assistance and human support in one seamless customer experience."
+>
+  <Navbar />
+
+  <main>
+    <section class="section project-detail-hero">
+      <div class="container">
+        <a href="/projects/" class="project-back-link">← All Projects</a>
+
+        <div class="kicker">PROJECT / 01 · AI & AUTOMATION</div>
+
+        <h1>Customer Support Operations Automation</h1>
+
+        <p class="project-detail-intro">
+          A customer support system where AI and human agents work together
+          to handle customer requests — while maintaining one consistent
+          experience for the customer.
+        </p>
+
+        <div class="resume-skills">
+          <span>AI Automation</span>
+          <span>Human-in-the-Loop</span>
+          <span>Workflow Automation</span>
+          <span>Customer Support</span>
+        <a
+  class="github-link"
+  href="https://github.com/Maditron/local-first-ai-customer-support-automation"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GitHub ↗
+</a>
+        </div>
+      </div>
+      
+    </section>
+
+    
+
+    <section class="section">
+      <div class="container project-detail-content">
+
+        <!-- ABOUT -->
+
+        <div class="project-case-section">
+          <div class="kicker">01 / ABOUT</div>
+          <h2>About the Project</h2>
+
+          <p>
+            Customer support often involves handling the same types of
+            questions repeatedly. Some requests are straightforward and can
+            be handled automatically, while others require human judgment,
+            experience, and attention.
+          </p>
+
+          <p>
+            I built this project around a simple idea: AI should take care
+            of what can be automated, while human agents remain available
+            whenever their involvement is needed.
+          </p>
+
+          <p>
+            The important part is that both operate as part of the same
+            support process. Whether a response comes from an AI system
+            or a human agent, the customer receives it through the same
+            support experience, without having to distinguish between them.
+          </p>
+
+          <p>
+            The goal is not simply to replace support agents with AI.
+            It's to combine automation and human involvement into one
+            coherent way of handling customer requests.
+          </p>
+        </div>
+
+        <!-- TECHNICAL CHALLENGES -->
+
+        <div class="project-case-section">
+          <div class="kicker">02 / ENGINEERING</div>
+          <h2>Technical Challenges</h2>
+
+          <h3>Knowing when to automate</h3>
+          <p>
+            Not every customer request should be handled automatically.
+            The system needs to distinguish between requests suitable
+            for automated handling and cases that need human attention.
+          </p>
+
+          <h3>Maintaining response consistency</h3>
+          <p>
+            AI-generated and human-written responses need to belong to
+            the same conversation flow. The customer should not have
+            to deal with separate channels or different support experiences.
+          </p>
+
+          <h3>Keeping humans in control</h3>
+          <p>
+            Automation should not mean giving an AI unrestricted authority.
+            Human involvement needs to remain possible when a request
+            is unclear, sensitive, or requires additional judgment.
+          </p>
+
+          <h3>Handling the complete conversation</h3>
+          <p>
+            Customer support is more than generating a single response.
+            Requests need to be processed in context, routed appropriately,
+            and followed through until they are resolved.
+          </p>
+        </div>
+
+        <!-- WHAT IT SOLVES -->
+
+        <div class="project-case-section">
+          <div class="kicker">03 / END-TO-END PROCESS</div>
+          <h2>What It Solves</h2>
+
+          <p>
+            The system brings the customer support process into one
+            automated workflow, from the first incoming message to
+            the final response.
+          </p>
+
+          <div class="support-workflow">
+
+            <div class="support-workflow-step">
+              <span class="workflow-number">01</span>
+              <div>
+                <h3>Request received</h3>
+                <p>
+                  A customer submits a support request through the
+                  connected support channel.
+                </p>
+              </div>
+            </div>
+
+            <div class="support-workflow-step">
+              <span class="workflow-number">02</span>
+              <div>
+                <h3>Request processed</h3>
+                <p>
+                  The request is analyzed and its content and context
+                  are used to determine how it should be handled.
+                </p>
+              </div>
+            </div>
+
+            <div class="support-workflow-step">
+              <span class="workflow-number">03</span>
+              <div>
+                <h3>Handling decision</h3>
+                <p>
+                  The workflow determines whether the request can
+                  proceed through automated handling or needs
+                  human involvement.
+                </p>
+              </div>
+            </div>
+
+            <div class="support-workflow-step">
+              <span class="workflow-number">04</span>
+              <div>
+                <h3>Response prepared</h3>
+                <p>
+                  AI prepares a response for automated handling,
+                  or a human agent reviews and writes the response
+                  when human involvement is required.
+                </p>
+              </div>
+            </div>
+
+            <div class="support-workflow-step">
+              <span class="workflow-number">05</span>
+              <div>
+                <h3>Response delivered</h3>
+                <p>
+                  The response is delivered through the same customer
+                  support experience, regardless of who prepared it.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="support-highlight">
+            <h3>One support experience. Two ways of handling requests.</h3>
+            <p>
+              AI and human agents work behind the scenes.
+              From the customer's perspective, it's one continuous
+              support conversation.
+            </p>
+          </div>
+        </div>
+
+        <!-- PICTURES -->
+
+        <div class="project-case-section">
+          <div class="kicker">04 / GALLERY</div>
+          <h2>Pictures</h2>
+
+          <p>
+            A closer look at the actual workflows and implementation.
+          </p>
+
+          <div class="project-gallery">
+        <img
+            src="/images/projects/customersupport.png"
+            alt="Customer Support Automation project"
+            loading="lazy"
+        />
+        </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
