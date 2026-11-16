@@ -648,16 +648,17 @@ footer { border-top:1px solid var(--line); padding:25px 0 35px; color:var(--mute
 .resume-skills .github-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 14px;
+  gap: 10px;
+  padding: 10px 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.04);
   color: var(--text);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
+  box-shadow: 0 0 12px rgba(120, 150, 255, 0.12);
 }
 
 .resume-skills .github-link span {
@@ -668,6 +669,9 @@ footer { border-top:1px solid var(--line); padding:25px 0 35px; color:var(--mute
 .resume-skills .github-link:hover {
   border-color: var(--accent);
   background: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 10px rgba(120, 150, 255, 0.25),
+    0 0 24px rgba(120, 150, 255, 0.15);
 }
 
 .resume-skills .github-link:hover span {
